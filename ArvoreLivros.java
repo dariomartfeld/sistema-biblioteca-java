@@ -39,7 +39,11 @@ public class ArvoreLivros {
             if (cmp == 0) {
                 return atual.livro;
             }
-            atual = (cmp < 0) ? atual.esquerda : atual.direita;
+            if (cmp < 0) {
+                atual = atual.esquerda;
+            } else {
+                atual = atual.direita;
+            }
         }
         return null;
     }

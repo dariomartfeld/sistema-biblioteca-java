@@ -73,7 +73,11 @@ public class Biblioteca {
 
     public void reporEstante() {
         Livro topo = pilhaDevolucoes.excluir();
-        System.out.println(topo == null ? "Pilha vazia." : "Reposto na estante: " + topo.getTitulo());
+        if (topo == null) {
+            System.out.println("Pilha vazia.");
+        } else {
+            System.out.println("Reposto na estante: " + topo.getTitulo());
+        }
     }
 
     public void listarReservas() {
